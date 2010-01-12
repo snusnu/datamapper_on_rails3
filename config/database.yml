@@ -1,0 +1,17 @@
+defaults: &defaults
+  adapter: mysql
+  username: root
+  password:
+  host: localhost
+
+development:
+  path: rails3_development
+  <<: *defaults
+
+test:
+  path: rails3_test
+  <<: *defaults
+
+production:
+  path: rails3_production
+  <<: *defaults
