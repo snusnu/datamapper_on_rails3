@@ -24,11 +24,18 @@ Also, it seems necessary to patch rails in one place in order to be able to run 
   disable_system_gems
   disable_rubygems
 
-although I guess this is probably a bundler issue. What you have to do is make http://github.com/rails/rails/blob/master/railties/lib/rails/backtrace_cleaner.rb#L34 read like:
+although I guess this is probably a bundler issue. What you have to do is make http://github.com/rails/rails/blob/master/railties/lib/rails/backtrace_cleaner.rb#L34 read something like:
 
   (Array(Gem.path) + [Gem.default_dir]).uniq.each do |path|
 
-instead. This will help you if you for example try to access a non existing resource
+if you're seeing the following error:
+
+  .../activesupport/lib/active_support/core_ext/string/output_safety.rb:28:in `original_plus'
+  .../activesupport/lib/active_support/core_ext/string/output_safety.rb:28:in `+'
+  .../railties/lib/rails/backtrace_cleaner.rb:34:in `add_gem_filters'
+  ...
+
+This will help you if you for example try to access a non existing resource
 
   /people/100
 
