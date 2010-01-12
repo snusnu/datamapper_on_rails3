@@ -1,13 +1,13 @@
 == Welcome to datamapper on Rails 3
 
-gem install bundler
-git clone git://github.com/snusnu/datamapper_on_rails3.git
-cd datamapper_on_rails3
-gem bundle
-bin/rake db:create
-bin/rake db:automigrate
-./script/server
-open http://localhost:3000/people
+  gem install bundler
+  git clone git://github.com/snusnu/datamapper_on_rails3.git
+  cd datamapper_on_rails3
+  gem bundle
+  bin/rake db:create
+  bin/rake db:automigrate
+  ./script/server
+  open http://localhost:3000/people
 
 You should see rails3 serving an empty list of people waiting to be added
 
