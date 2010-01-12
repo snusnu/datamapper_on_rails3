@@ -5,13 +5,13 @@ defaults: &defaults
   host: localhost
 
 development:
-  path: rails3_development
+  database: rails3_development
   <<: *defaults
 
 test:
-  path: rails3_test
+  database: rails3_test
   <<: *defaults
 
 production:
-  path: rails3_production
+  database: rails3_production
   <<: *defaults
