@@ -23,7 +23,6 @@ git "git://github.com/datamapper/dm-more.git" do
 
 end
 
-gem 'dm-active_model',   '~> 0.2'
 gem 'rails3_datamapper', :git  => 'git://github.com/snusnu/rails3_datamapper.git'
 
 only :test do
