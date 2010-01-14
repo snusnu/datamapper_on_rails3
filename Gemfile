@@ -7,7 +7,7 @@ gem 'rails',             :git => "git://github.com/rails/rails.git"
 gem 'arel',              :git => "git://github.com/rails/arel.git"
 gem 'rack',              '~> 1.1'
 
-gem 'dm-core',           :git => 'git://github.com/datamapper/dm-core.git'
+gem 'dm-core',           :git => 'git://github.com/snusnu/dm-core.git'
 
 gem 'data_objects',      do_version
 gem 'do_mysql',          do_version
@@ -23,7 +23,7 @@ git "git://github.com/datamapper/dm-more.git" do
 
 end
 
-gem 'dm-active_model',   :git  => 'git://github.com/snusnu/dm-active_model.git'
+gem 'dm-active_model',   '~> 0.2'
 gem 'rails3_datamapper', :git  => 'git://github.com/snusnu/rails3_datamapper.git'
 
 only :test do

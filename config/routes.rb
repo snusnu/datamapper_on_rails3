@@ -9,7 +9,7 @@ RailsApp::Application.routes.draw do |map|
   #
   # In case it isn't obvious, that should read: resources :people
 
-  resources :person
+  resources :people
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

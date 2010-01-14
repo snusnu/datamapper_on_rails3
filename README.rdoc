@@ -13,13 +13,17 @@ You should see rails3 serving an empty list of people waiting to be added
 
 == Current Issues
 
-Currently it looks like resource routes need to specified using the singular form of the resource, something like:
+To work around an issue with bundler-0.8.1 which doesn't currently support
+dependencies from git with a :branch option specified, here's what you need
+to do (This will not be necessary once my changes are merged into dm-core)
 
-  resources :person
+  cd vendor/gems/ruby/1.8/dirs/dm-core
+  git checkout master (workaround a bug in bundler that leaves us on no-branch)
+  git checkout -b active_support --track origin/active_support
 
-for the router to recognize the routes. I'm not sure why this is. Maybe it has something to do with extlib and active_support both trying to inflect, or maybe it's some problem with http://github.com/snusnu/dm-active_model or maybe something entirely different.
+This is necessary to have dm-core running with active_support-3.0.pre
 
-Also, it seems necessary to patch rails in one place in order to be able to run with
+Additionally, it seems necessary to patch rails in one place in order to be able to run with
 
   disable_system_gems
   disable_rubygems
