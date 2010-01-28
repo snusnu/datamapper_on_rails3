@@ -47,7 +47,9 @@ and rails simply tells you
 
   Error during failsafe response: can't convert Array into String
 
-Hopefully this will get fixed upstream soon. Additionally, you might want to patch your bundled rails like http://github.com/woodie did at http://gist.github.com/266649 This will provide you with at least some information of what actually went wrong.
+Hopefully this will get fixed upstream soon. In the meantime, skipping _disable_rubygems_ maybe works around that too. Honestly, I was too lazy to try.
+
+Additionally, you might want to patch your bundled rails like http://github.com/woodie did at http://gist.github.com/266649 This will provide you with at least some information of what actually went wrong.
 
 == Welcome to Rails
 

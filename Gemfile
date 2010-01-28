@@ -12,7 +12,7 @@ gem 'dm-core',           :git => 'git://github.com/snusnu/dm-core.git'
 gem 'data_objects',      do_version
 gem 'do_mysql',          do_version
 
-git "git://github.com/datamapper/dm-more.git" do
+git "git://github.com/snusnu/dm-more.git" do
 
   gem 'dm-types',        :path => 'dm-types'
   gem 'dm-validations',  :path => 'dm-validations'
@@ -25,7 +25,7 @@ git "git://github.com/datamapper/dm-more.git" do
 
 end
 
-gem 'rails3_datamapper', :git  => 'git://github.com/snusnu/rails3_datamapper.git'
+gem 'rails3_datamapper', :git  => 'git://github.com/dkubb/rails3_datamapper.git'
 
 only :test do
  
