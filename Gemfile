@@ -20,6 +20,8 @@ git "git://github.com/datamapper/dm-more.git" do
   gem 'dm-constraints',  :path => 'dm-constraints'
   gem 'dm-aggregates',   :path => 'dm-aggregates'
   gem 'dm-timestamps',   :path => 'dm-timestamps'
+  gem 'dm-observer',     :path => 'dm-observer'
+  gem 'dm-migrations',   :path => 'dm-migrations'
 
 end
 
@@ -27,7 +29,7 @@ gem 'rails3_datamapper', :git  => 'git://github.com/snusnu/rails3_datamapper.git
 
 only :test do
  
-  gem 'rspec',           '>= 1.2.9'
+  gem 'rspec',           '~> 1.3'
   gem 'do_sqlite3',      do_version
  
 end

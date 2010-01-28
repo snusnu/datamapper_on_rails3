@@ -25,10 +25,13 @@ module RailsApp
     # config.i18n.default_locale = :de
 
     # Configure generators values. Many other options are available, be sure to check the documentation.
-    # config.generators do |g|
-    #   g.orm             :active_record
-    #   g.template_engine :erb
-    #   g.test_framework  :test_unit, :fixture => true
-    # end
+
+    config.filter_parameters = :password
+
+    config.generators do |g|
+      g.orm             :data_mapper, :migration => true
+      g.template_engine :erb
+    end
+
   end
 end

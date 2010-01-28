@@ -12,8 +12,8 @@ end
 # To pick the frameworks you want, remove 'require "rails/all"'
 # and list the framework railties that you want:
 
-require "active_model/railtie"
-require "rails3_datamapper/railtie"
 require "action_controller/railtie"
 require "action_view/railtie"
 require "action_mailer/railtie"
+require "active_model/railtie"
+require "rails3_datamapper"

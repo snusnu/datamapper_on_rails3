@@ -1,2 +1,18 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
+/*<![CDATA[*/
+$(document).ready(function(){
+
+  $("ol.conversation").hide();
+  $(".conversation-header").addClass("conversation-closed");
+
+
+  $(".conversation-header").click(function(event){
+    $(event.target).next("ol.conversation").slideToggle("fast");
+    if ($(event.target).hasClass("conversation-closed")) {
+      $(event.target).removeClass("conversation-closed");
+    } else {
+      $(event.target).addClass("conversation-closed");
+    }
+  });
+
+});
+/*]]>*/
