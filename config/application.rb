@@ -1,6 +1,16 @@
 require File.expand_path('../boot', __FILE__)
 
-module RailsApp
+# Pick the frameworks you want:
+require "action_controller/railtie"
+require "rails3_datamapper/railtie"
+require "action_mailer/railtie"
+# require "active_resource/railtie"
+# require "rails/test_unit/railtie"
+
+# Auto-require default libraries and those for the current Rails environment.
+Bundler.require :default, Rails.env
+
+module DatamapperOnRails3
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -25,13 +35,13 @@ module RailsApp
     # config.i18n.default_locale = :de
 
     # Configure generators values. Many other options are available, be sure to check the documentation.
-
-    config.filter_parameters = :password
-
     config.generators do |g|
       g.orm             :data_mapper, :migration => true
       g.template_engine :erb
+      #g.test_framework  :rspec, :fixture => true
     end
 
+    # Configure sensitive parameters which will be filtered from the log file.
+    config.filter_parameters << :password
   end
 end

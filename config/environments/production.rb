@@ -1,4 +1,4 @@
-RailsApp::Application.configure do
+DatamapperOnRails3::Application.configure do
   # Settings specified here will take precedence over those in config/environment.rb
 
   # The production environment is meant for finished, "live" apps.
@@ -6,8 +6,8 @@ RailsApp::Application.configure do
   config.cache_classes = true
 
   # Full error reports are disabled and caching is turned on
-  config.action_controller.consider_all_requests_local = false
-  config.action_controller.perform_caching             = true
+  config.consider_all_requests_local       = false
+  config.action_controller.perform_caching = true
 
   # See everything in the log (default is :info)
   # config.log_level = :debug

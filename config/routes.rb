@@ -1,13 +1,4 @@
-RailsApp::Application.routes.draw do |map|
-
-  # FIXME
-  #
-  # This is really weird, maybe it has something to do with
-  # Extlib::Inflection and active_support being both activated.
-  # Another possibility is that dm-active_model still isn't really
-  # active_model compliant. This definitely needs investigation
-  #
-  # In case it isn't obvious, that should read: resources :people
+DatamapperOnRails3::Application.routes.draw do |map|
 
   resources :people
 

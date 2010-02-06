@@ -1,35 +1,20 @@
-disable_system_gems
-disable_rubygems
+source 'http://gemcutter.org'
 
-do_version               = '0.10.1'
+gem 'rails',        '3.0.0.beta'
 
-gem 'rails',             :git => "git://github.com/rails/rails.git"
-gem 'arel',              :git => "git://github.com/rails/arel.git"
-gem 'rack',              '~> 1.1'
+gem 'data_objects', '0.10.1'
+gem 'do_mysql',     '0.10.1'
 
-gem 'dm-core',           :git => 'git://github.com/snusnu/dm-core.git'
+git 'git://github.com/snusnu/dm-core.git', 'branch' => 'active_support'
+git "git://github.com/snusnu/dm-more.git", 'branch' => 'active_support'
+git 'git://github.com/dkubb/rails3_datamapper.git'
 
-gem 'data_objects',      do_version
-gem 'do_mysql',          do_version
-
-git "git://github.com/snusnu/dm-more.git" do
-
-  gem 'dm-types',        :path => 'dm-types'
-  gem 'dm-validations',  :path => 'dm-validations'
-  gem 'dm-serializer',   :path => 'dm-serializer'
-  gem 'dm-constraints',  :path => 'dm-constraints'
-  gem 'dm-aggregates',   :path => 'dm-aggregates'
-  gem 'dm-timestamps',   :path => 'dm-timestamps'
-  gem 'dm-observer',     :path => 'dm-observer'
-  gem 'dm-migrations',   :path => 'dm-migrations'
-
-end
-
-gem 'rails3_datamapper', :git  => 'git://github.com/dkubb/rails3_datamapper.git'
-
-only :test do
- 
-  gem 'rspec',           '~> 1.3'
-  gem 'do_sqlite3',      do_version
- 
-end
+gem 'dm-core'
+gem 'dm-types'
+gem 'dm-validations'
+gem 'dm-constraints'
+gem 'dm-aggregates'
+gem 'dm-timestamps'
+gem 'dm-migrations'
+gem 'dm-observer'
+gem 'rails3_datamapper'

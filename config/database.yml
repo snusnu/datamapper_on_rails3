@@ -5,13 +5,13 @@ defaults: &defaults
   host: localhost
 
 development:
-  database: rails3_development
+  database: datamapper_on_rails3_development
   <<: *defaults
 
 test:
-  database: rails3_test
+  database: datamapper_on_rails3_test
   <<: *defaults
 
 production:
-  database: rails3_production
+  database: datamapper_on_rails3_production
   <<: *defaults
