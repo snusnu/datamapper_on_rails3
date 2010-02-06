@@ -4,7 +4,12 @@ Getting {datamapper}[http://github.com/datamapper/dm-core] up and running on rai
 
 To get started you only need to issue a few simple commands. These will install a bundled environment consisting of everything that is needed to run this app. Currently I only succeeded using {rails-3.0.0.beta}[http://github.com/rails/rails] but hopefully I will be able to find out how to support rails master from git too. I haven't yet figured out how to that with {bundler}[http://github.com/carlhuda/bundler].
 
-These are the commands to get you going in no more than 5 minutes.
+These are the commands to get you going in no more than 5 minutes. If you want to create your own rails3 app, you need to install rails gems first.
+
+  gem install i18n tzinfo builder memcache-client rack rack-test rack-mount erubis mail text-format thor bundler
+  gem install rails --pre
+
+To get this sample app installed you then have to
 
   gem install bundler
   git clone git://github.com/snusnu/datamapper_on_rails3.git
