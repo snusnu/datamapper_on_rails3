@@ -36,6 +36,7 @@ module DatamapperOnRails3
 
     # Configure generators values. Many other options are available, be sure to check the documentation.
     config.generators do |g|
+      g.orm             :data_mapper, :migration => true
       g.template_engine :erb
       #g.test_framework  :rspec, :fixture => true
     end
