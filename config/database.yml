@@ -1,17 +1,65 @@
 defaults: &defaults
-  adapter: mysql
-  username: root
-  password:
-  host: localhost
+  adapter: sqlite3
 
 development:
   database: datamapper_on_rails3_development
   <<: *defaults
-
 test:
   database: datamapper_on_rails3_test
   <<: *defaults
-
 production:
   database: datamapper_on_rails3_production
   <<: *defaults
+
+
+# mysql_defaults: &mysql_defaults
+#   adapter: mysql
+#   username: root
+#   password:
+#   host: localhost
+#
+# postgres_defaults: &postgres_defaults
+#   adapter: mysql
+#   username: root
+#   password:
+#   host: localhost
+#
+# oracle_defaults: &oracle_defaults
+#   adapter: mysql
+#   username: root
+#   password:
+#   host: localhost
+#
+#
+# development:
+#   database: rails3_mysql_development
+#   <<: *mysql_defaults
+#   repositories:
+#     foo:
+#       database: rails3_postgres_development
+#       <<: *postgres_defaults
+#     bar:
+#       database: rails3_oracle_development
+#       <<: *oracle_defaults
+#
+# test:
+#   database: rails3_mysql_test
+#   <<: *mysql_defaults
+#   repositories:
+#     foo:
+#       database: rails3_postgres_test
+#       <<: *postgres_defaults
+#     bar:
+#       database: rails3_oracle_test
+#       <<: *oracle_defaults
+#
+# production:
+#   database: rails3_mysql_production
+#   <<: *mysql_defaults
+#   repositories:
+#     foo:
+#       database: rails3_postgres_production
+#       <<: *postgres_defaults
+#     bar:
+#       database: rails3_oracle_production
+#       <<: *oracle_defaults
