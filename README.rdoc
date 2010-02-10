@@ -19,8 +19,3 @@ To get this sample app installed you then have to issue the following commands. 
   rails server
 
 Point your browser to http://localhost:3000/people and you should now see rails3 serving an empty list of people. Feel free to add some.
-
-== TODO
-
-* Support running on rails master
-* Make this application do something useful
