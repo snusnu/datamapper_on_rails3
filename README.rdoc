@@ -1,5 +1,9 @@
 == Welcome to datamapper on Rails 3 (beta)
 
+For a more thorough documentation about what's available in your app and how it's all done, have a look at the {README}[http://github.com/dkubb/rails3_datamapper/blob/master/README.rdoc] over at {rails3_datamapper}[http://github.com/dkubb/rails3_datamapper]
+
+== The hard way
+
 Getting {datamapper}[http://github.com/datamapper/dm-core] up and running on rails3 is really easy. It won't take longer than 2 minutes, really :) Here's how:
 
   gem install i18n tzinfo builder memcache-client rack rack-test rack-mount erubis mail text-format thor bundler
@@ -10,17 +14,11 @@ To get this sample app installed you then have to issue the following commands. 
   gem install bundler
   git clone git://github.com/snusnu/datamapper_on_rails3.git
   cd datamapper_on_rails3
-  bundle install vendor
-  vendor/bin/rake db:create
-  vendor/bin/rake db:automigrate
-  vendor/bin/rails server
-  open http://localhost:3000/people
+  bundle install
+  rake db:setup
+  rails server
 
 Point your browser to http://localhost:3000/people and you should now see rails3 serving an empty list of people. Feel free to add some.
-
-== More documentation
-
-For a more thorough documentation about what's available in your app and how it's all done, have a look at the {README}[http://github.com/dkubb/rails3_datamapper/blob/master/README.rdoc] over at {rails3_datamapper}[http://github.com/dkubb/rails3_datamapper]
 
 == TODO
 
